@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tactical HUD Custom Styling */
+:root {
+  color-scheme: dark;
+}
+
+/* Custom Scrollbar for HUD */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0d14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Leaflet Dark Map Overrides */
+.leaflet-container {
+  background-color: #0b0f19 !important;
+  font-family: inherit;
+}
+
+.leaflet-tile {
+  filter: brightness(0.7) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) !important;
+}
+
+.dark-map .leaflet-tile {
+  filter: brightness(0.65) invert(1) contrast(1.8) hue-rotate(190deg) saturate(0.4) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #101522 !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7) !important;
+}
+
+.leaflet-popup-tip {
+  background: #101522 !important;
+  border: 1px solid #334155 !important;
+}
+
+/* Radar scanline effect */
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(6, 182, 212, 0.05) 50%,
+    rgba(6, 182, 212, 0.05)
+  );
+  background-size: 100% 4px;
+}
+
+/* Monospace Plate Style */
+.plate-badge {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
